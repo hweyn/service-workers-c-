@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Push Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
+    <script src="index.js"></script>
+</head>
+<body>
+    <!-- run frontend: http-server in terminal, choose http://127.0.0.1:8080 -->
+    <h1>Test webpush</h1>
+
+    <button id="permission-btn" onclick="registerSWAndRequestPermission()">Ask Permission</button>
+    <button id="permission-btn" onclick="subscribeAndSaveSubscription()">Subscribe</button>
+    <button id="permission-btn" onclick="pushToSubscriptions()">Test Push</button>
+    <pre>
+        currently this only works in edge, not in chrome 
+
+        
+        click 'ask permission'
+        -- checks browsersupport for serviceworker and pushmanager
+        -- registers service-worker
+        -- asks browser for permission to show notifications (once, can be reset in browser settings)
+        -- shows a local notification (call swRegistration.showNotification)
+
+        when sw is activated
+        -- susbscribe to push notifications
+        -- save subscription in api (in memory)
+
+        click 'test push'
+        -- before triggering the push, make sure the backend is running (node index.js in terminal) and that frontend console has logged 'saving the subscription'. 
+
+        ! unregister sw (dev tools > application) and hit ctrl+F5 to get clean slate (might need to update the sw as well)
+    </p>
+    <div id="subscription"></div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "AWmjBCzPdcnW1YikygGby89tah59SMN/odhaBCSX9Po=",
+  "Source": "service-worker-api",
+  "BasePath": "_content/service-worker-api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
